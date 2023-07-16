@@ -16,11 +16,18 @@ puts num_compare(6,7)
 # Challenge2: Ordered Count of Characters(Toy Problem)
 def list_occurances(string)
     list = []
-    count = 0
-    arr []
-    string.split.each do |char|
-        if spring.split.each == char
-            count += 1
-            
+    count = {}
+    string.split("").each do |char|
+        if count[char]
+            count[char] += 1
+        else
+            count[char] = 1
+        end    
     end
+    count.each do |char, num|
+        list << [char, num]
+    end
+    list
 end
+
+puts list_occurances("abracadabra").inspect
